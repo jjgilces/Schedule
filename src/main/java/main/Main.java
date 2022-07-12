@@ -5,14 +5,11 @@
 package main;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import modelo.Day;
@@ -25,25 +22,19 @@ import modelo.Employee;
 public class Main {
 
     public static void main(String[] args) {
-        Date fecha = new Date();
-//        ArrayList<Employee> employees = cargarData();
-//        System.out.println(employees);
         File folder = new File("src/data");
         File[] listOfFiles = folder.listFiles();
         Scanner sc = new Scanner(System.in);
-//        String name= sc.nextLine();
-//        System.out.println(listOfFiles);
         System.out.println("Los archivos disponibles son: ");
         for (int i = 0; i < listOfFiles.length; i++) {
             if (listOfFiles[i].isFile()) {
                 System.out.println((i+1)+")" + listOfFiles[i].getName());
             } 
         }
-        System.out.println("\t Ingrese el numero del archivo a leer:");
-        int opc= sc.nextInt();
+        System.out.print("\t Ingrese el numero del archivo a leer:");
+        int opc= sc.nextInt()-1;
         String path= listOfFiles[opc].getPath();
-        System.out.println(path);
-          ArrayList<Employee> employees = cargarData(path);
+         ArrayList<Employee> employees = cargarData(path);
         System.out.println(employees);
     }
 
