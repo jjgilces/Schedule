@@ -5,9 +5,10 @@
 package modelo;
 
 /**
- *
- * @author johanjairgilcesreyes
- */
+* Class of days
+* restrict valid days
+* @author Johan Gilces
+*/
 public enum Day {
     MO,TU,TH,WD,FI,SA,SU
 }

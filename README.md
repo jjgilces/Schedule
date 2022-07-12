@@ -12,35 +12,34 @@ that it minimizes the number of comparisons needed to determine if they coincide
 only the days in which both employees attended to the office are considered, this is obtained using Sets intersections. 
 
 
-## Requisitos
+## Requirements
 
-* Instale Java, desde el [sitio oficial](https://www.java.com/es/download/)
-* Instale Maven, desde el [mac](https://javabydeveloper.com/how-to-install-maven-on-mac-osx/). [windows](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
-	- Mediante la línea de comandos, verifique la versión de Maven, con: `mvn -v`
-
-
-## Instrucciones
-
-* Desde la línea de comandos
-	+ Ingrese a la carpeta con el ejercicio `cd ~/schedule`
-	+ Compile el proyecto, with: `mvn compile`
-    + Ejecute el proyecto, with: `mvn exec:java`
-* Para cargar un nuevo archivo :
-	+  Agregue su archivo .txt en la ruta
-	```
-  	src/data/
-  	```
-* Para ejecutar un archivo:
-	+ Seleccione un archivo existente: 
-  	```
-  	![Ejecución del archivo](src/img/run.png)
-  	``` 
+* Install Java, from the [official site](https://www.java.com/en/download/)
+* Install Maven, from the [mac](https://javabydeveloper.com/how-to-install-maven-on-mac-osx/). [windows](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
+- Using the command line, check the Maven version, with: `mvn -v`
 
 
-## Pruebas unitarias
+## Instructions
 
-* Desde la línea de comandos ejecute: `npm test`
-* Los resultados posibles a las pruebas unitarias pueden ser: 
-	+ Todos fueron exitosas, o
-	+ Existen pruebas unitarias fallidas.
-* En caso de ser necesario, modifique el/los archivo(s) y vuelva a ejecutar las pruebas unitarias. 
+* From the command line
++ Enter the folder with the exercise `cd ~/schedule`
++ Compile the project, with: `mvn compile`
+    + Run the project, with: `mvn exec:java`
+* To upload a new file:
++ Add your .txt file in the path
+
+  src/data/
+  
+* To run a file:
++ Select an existing file:
+  
+  ![Run file](src/img/run.png)
+  
+
+
+## Unit tests
+
+* From the command line run: `npm test`
+* Possible results to unit tests can be:
+    + All were successful, or
+    + There are failed unit tests.
