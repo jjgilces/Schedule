@@ -5,6 +5,7 @@
 package modelo;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -34,12 +35,17 @@ public class Employee {
     }
 
     public int match(Employee o){
-        Set<Day> sameDays=o.schedule.keySet();
-        System.out.println(sameDays);
-        sameDays.retainAll(this.schedule.keySet());
-                System.out.println(sameDays);
-
-      return 1;
+        int n=0;
+       for(Day d: this.schedule.keySet()){
+           Hours h=schedule.getOrDefault(d, null);
+           Hours other= o.schedule.getOrDefault(d, null);
+           if(other!= null && h.start < other.end && other.start < h.end){
+               n+=1;
+           }
+           
+       }
+        System.out.println(this.name + "-" +o.name+" " +n);
+      return n;
     }
     @Override
     public String toString() {
