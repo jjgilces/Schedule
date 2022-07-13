@@ -28,18 +28,18 @@ only the days in which both employees attended to the office are considered, thi
 * To upload a new file:
 + Add your .txt file in the path
 
-  src/data/
+  `src/data/`
   
 * To run a file:
-+ Select an existing file:
+    + Select an existing file:
   
-  ![Run file](src/img/run.png)
+        ![Run file](src/img/run.png)
   
 
 
 ## Unit tests
 
-* From the command line run: `npm test`
+* From the command line run: `mvn test`
 * Possible results to unit tests can be:
     + All were successful, or
     + There are failed unit tests.
